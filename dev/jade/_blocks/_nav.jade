@@ -1,0 +1,7 @@
+nav.nav
+   .container
+      -var items = ["Главная", "Сеть", "GSM", "Модули", "Группы", "Автоматизация", "Входы"]
+      ul.nav__list
+         each item in items
+            li(class="nav__item nav__item_" + ( (item == "Главная") ? 'active' : ''))
+               a(href="#").nav__link= item

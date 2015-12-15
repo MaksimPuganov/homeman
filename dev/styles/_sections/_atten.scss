@@ -1,0 +1,18 @@
+.attention__text {
+  p {
+    color: $black;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+
+  .column {
+    &.first {
+      float: left !important;
+    }
+
+    &.last {
+      float: right !important;
+    }
+  }
+}

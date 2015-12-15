@@ -1,0 +1,60 @@
+.pagination {
+  margin-top: 65px;
+  float: right;
+}
+
+.pagination__list {
+  @include inlineblock();
+}
+
+.pagination__item {
+  @include inlineblock(middle);
+  width: 26px !important;
+  height: 25px !important;
+  background-color: #fbfbfb;
+  //@include background-image(linear-gradient(to top, rgba(0, 0, 0, 0.53) 0%, rgba(255, 255, 255, 0.53) 100%));
+  border: 1px solid #dee1e4;
+  @include border-radius(3px);
+  @include box-shadow(0 1px 1px rgba(0, 0, 0, 0.12), inset 0 1px 0 1px white);
+  position: relative;
+}
+
+
+.pagination__link {
+  @include absolute-center;
+  display: block;
+  background-color: $white;
+
+  &:hover {
+    background-color: #e0e0e0;
+  }
+
+  &.active {
+    background-color: #e0e0e0;
+  }
+}
+
+.pagination_mark {
+  @include absolute-center;
+  text-shadow: 0 1px 0 white;
+  color: #7f7f7f;
+  font-size: 12px;
+  line-height: 26px;
+  @include open-sans(bold);
+  text-decoration: none;
+  text-align: center;
+}
+
+$pagination-map: sprite-map('icons/pagination/*.png', $spacing: 70px);
+
+@each $item in (prev,next) {
+  .pagination__item_#{$item} {
+    .pagination_mark {
+      @include get-sprite($pagination-map, $item);
+    }
+  }
+}
+
+
+@import "../_views/grids";
+@import "../_views/line";

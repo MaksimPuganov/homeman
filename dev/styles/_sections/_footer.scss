@@ -1,0 +1,11 @@
+.footer {
+  overflow: hidden;
+  height: 50px;
+  line-height: 50px;
+  @extend .orange, .darken-3;
+
+  .footer__copyright {
+    @extend .white-text;
+    text-align: center;
+  }
+}

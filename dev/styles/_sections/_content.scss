@@ -1,0 +1,11 @@
+.responsive-table {
+
+  .table__item_td {
+    width: 25%;
+    //padding: 40px;
+    text-align: center;
+    @include border-radius(10px);
+    border: 2px solid #ef6c00;
+  }
+
+}

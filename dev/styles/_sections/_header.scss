@@ -1,0 +1,34 @@
+.header {
+  @extend .orange, .darken-3;
+}
+
+.header__left {
+  width: 60%;
+  float: left;
+}
+
+.header__right {
+  width: 40%;
+  float: right;
+
+  .date, .battery-info {
+    text-align: right;
+    @extend .white-text;
+    @include font-size(2);
+  }
+}
+
+.header__title {
+  float: right;
+  @include font-size(4);
+  color: #fff;
+  text-align: center;
+
+}
+
+.logo {
+  width: 85px;
+  height: 85px;
+  float: left;
+  background-image: url(data:image/gif;base64,R0lGODlhVQBVAMQAAAAAABsZEkA8JGhaGGZnaIt6HMaBGpKOdaSRG+ORFKmpqsKpDv2pDru7vNi8DPy9ENfAQMPDxubHCPvJIPnNDNDQ0O/QB/fWANnZ1vjZAf/gAeHh4/Hy8v///wAAAAAAACH5BAkAAB4ALAAAAABVAFUAAAX/oCeOZGmeaKqubOu+cCzPdG3feMo8ee+Tj0uG9yvWGJTMZckwOmFI5TJDeVpXQelSSLx6RdGteNktJb698HjcHCUMhjP6ll2PqaJ3fH7b2e0ZGgxwcnxHSX9jGhIICG2GNXWJUxkIBQsaF4+QUA9akxoOBQgXmVSbnCxqGqyfUxoLBQ4aWhkTqW+FKHWsCwMFEp9Ko6V2qHx6umCeUxIDAAQRBZlLi5e0gBTHhslgiNXPAAEC09USstQZ6ndVqSTJgWIaCAD1A9jWErS0Eg4OrkPckdhhaZYWWALuCdFgAd2iBZYQ/DMm0AMSVqIQWKBWSh0sUpcsxLoUDNuaU+6y/0jYCMthBgkQERwgQK4AOQStJglpBylLhlgSGV6CeEABBg4dOAhopI+Wqz8B+agp5oApAgLROmjt0ADDgQGBMlmQoFPMNieShHicR6AB1wpbO1RQ0CECAoijSJXdefZHkDH+VkKgq1UB3LgHOFQgIMuCkL1TeDqZuiWmTAUNkBqOW9cthwOPIW+JaiStPFYXLEBosKHD5rgcCNvlKJpJ6dCTLCAtfDiugtYdDkyszdcH5UkY4jbovbVBBK0bCjzdS5rON50ZIGBooODATKwEvGPmvlUBJuJbytAwnWhRgHrw48sfV1QaavSaDk3/oyGc/P8ABtAYeijJcBwoCwCoIP+AA0i03yTVucCeTv0taCF8ApiEn3oqHEhhghcGKIAAAQQQDH5b9DXQdaJVGCKGB1TAwQbOHXAeinhggZtoL733YgAKzLgBBxHM2MCNOHI4god7zfOiOHAVWUEFRWJg14OiKclkk/5ZGABcHLi1AQbbZQYaiqPlB8SOxGVggY8XJhYBmXM5F0EEDZyJZnHeYNmkAy8KQKRiYxa51WeOoVmgRSyi6GSIBNTFgZVucXZAogReoB4ze1ZTwIt0ERoBcIhhWtuiJDSKnwafhvgcmVztdqiepz5w1paQuXhhBBWQeSdnSSHg5x2arsBAp6V0uaBhHBCZGWcb4MSjNi38hab/rhYSQKSUpGoVAZIQFvuCqi22eqEA0PVqaHkLDEuFkh2S26S5F9JV5J3PanXAiRBSa+C19AS6gYyjYqAArwqUk4gS8Eo4rB2wPAnNBnNiMKWM5tHGjoouyAvhmxJry5W3wVmwH6r6oYdtiAKwRmZs0p4kbhqrAipxPQIUpcAAbPLp18OK0HtzALPYYesTHkOVgQA3wwfuYw3ngCvEFjB9c8yj+XvFsSpboOyCAYDLMB+c1sZKAXAqKEDRWXNcGtBiBOK1iDjRhjIaUwOytICWFDDKLBqO7Q7XxPVHNCuI39d2RR6UTZ0Ea2OzQLsnaV2R4x/e4+YAnCsMNeMrAg3LiD394YSAQj6DDgaPVY+y1ABrrxP15S2eM+IoG11AweyMY77wIgLoo47lqpuQ9xYICct78YTn6swAxUt4qjYGDKBM9Cf4LnMXBhSAvbFJo+z99x32e4wB5GPxlOAmXJ9+CY7fPQL676uACPso0F8/Cse+y4L7+xvBA4h3AgAG8IAITKACF0iCEAAAOw==)
+}

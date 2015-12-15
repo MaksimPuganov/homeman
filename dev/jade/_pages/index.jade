@@ -1,0 +1,14 @@
+extends ../main
+block title
+    | Главная страница
+block content
+    article.content-wrapper
+        .container
+            .row
+                div(class="col s12")
+                    table.responsive-table
+                        tbody
+                            - var items = ['Контакт', 'Термометр', '', '']
+                            for item in items
+                                td.table__item_td= item
+            //include ../_blocks/_sidebar

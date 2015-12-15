@@ -1,0 +1,87 @@
+.sort {
+  background: #e4ebee;
+  @include clearfix;
+  border: 1px solid $grey;
+  @include border-radius(5px);
+  margin-bottom: 20px;
+}
+
+.sort__title {
+  color: #5d656c;
+  font-size: 14px;
+  line-height: 20px;
+  @include inlineblock(middle);
+  margin-right: 11px;
+}
+
+.sort__select {
+  @include inlineblock(middle);
+}
+
+.sort__left {
+  float: left;
+  width: 50%;
+}
+
+.sort__right {
+  float: right;
+  width: 50%;
+  text-align: right;
+}
+
+.sort__view {
+  @include inlineblock(middle);
+}
+
+.sort__view-list {
+  @include clearfix;
+}
+
+.sort__view-item {
+  float: left;
+  border-left: 1px solid $grey;
+}
+
+.sort__view-link {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  display: block;
+  outline: none !important;
+}
+
+.sort__view-icon {
+  @include absolute-center;
+}
+
+.sort__select--wrap {
+  padding-top: 11px;
+  padding-left: 20px;
+}
+
+$views-map: sprite-map("icons/views/*.png", $spacing: 70px);
+$views: rows, grids, lines;
+
+@each $view in $views {
+  .sort__view-#{$view} {
+    .sort__view-icon {
+      @include get-sprite($views-map, $view);
+    }
+
+    &:hover {
+      $view-hover: $view + "-hover";
+
+      .sort__view-icon {
+        @include get-sprite($views-map, $view-hover);
+      }
+    }
+
+    &.active {
+      $view-hover: $view + "-hover";
+
+      .sort__view-icon {
+        @include get-sprite($views-map, $view-hover);
+      }
+    }
+  }
+}
