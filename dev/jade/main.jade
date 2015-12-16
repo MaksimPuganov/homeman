@@ -11,20 +11,22 @@ html(lang="ru-RU")
             block title
         meta(name='viewport' content='width=device-width')
         link(rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans:100,400,600,700&subset=latin,cyrillic' media='screen, projection, print')
+        link(rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css' media='screen, projection, print')
         link(rel='stylesheet' type='text/css' href='css/main.css' media='screen, projection, print')
-       <!-- script(src='/js/_vendors/modernizr-2.6.2-respond-1.1.0.min.js') -->
     body
         <!--[if lt IE 8]>
         <p class="chromeframe">Похоже, что ты используешь устаревший браузер, друг. Пожалуйста, <a href="http://browsehappy.com/">скачай новый браузер абсолютно бесплатно</a> или <a href="http://www.google.com/chromeframe/?redirect=true">активируй Google Chrome Frame</a></p>
         <![endif]-->
-        .wrapper
+        .wrapper.open-sidebar
+            include _blocks/_sidebar
             .maincontent
                 include _blocks/_header
                 include _blocks/_nav
                 block content
-        include _blocks/_footer
-        script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
-        script.
+            include _blocks/_footer
+        script(src='https://code.jquery.com/jquery-2.1.1.min.js')
+        <!-- script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js") -->
+        script(src="js/main.js")
         <!--    window.jQuery || document.write('<script src="/js/_vendors/jquery-1.11.3.min.js"><\/script>');
         <!-- script(src='/js/_vendors/jquery-ui.min.js') -->
         <!--script(src='js/plugins.min.js') -->
