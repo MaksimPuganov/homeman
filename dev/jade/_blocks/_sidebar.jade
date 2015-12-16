@@ -2,5 +2,5 @@
         -var items = ["Главная", "Сеть", "GSM", "Модули", "Группы", "Автоматизация", "Входы"]
         ul.sidebar__list
             each item in items
-                li(class="sidebar__item sidebar__item_" + ( (item == "Главная") ? 'active' : ''))
+                li(class="sidebar__item " + ( (item == "Главная") ? 'active' : ''))
                     a(href="#").sidebar__link= item
