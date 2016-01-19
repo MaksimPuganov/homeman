@@ -53,6 +53,7 @@ gulp.task('sass', function() {
         .pipe(sass().on('error', sass.logError))
         .pipe(plumber())
         .pipe(uncss(paths.uncss))
+        .pipe(sourcemaps.init(paths.scss.location))
         .pipe(nano())
         .pipe(sourcemaps.write(paths.scss.entryPoint))
         .pipe(gulp.dest(paths.scss.entryPoint));

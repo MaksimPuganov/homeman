@@ -1,0 +1,8 @@
+<!-- block sensors -->
+
+.sensors
+   - var items = ['Контакт', 'Термометр']
+   for item in items
+      div(class="sensor__item " + ((item == "Контакт") ? 'contact' : 'term'))
+         .sensor__name
+            .icons

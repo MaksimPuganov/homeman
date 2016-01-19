@@ -1,0 +1,42 @@
+$sens-height: 60px;
+$sens-width: 80px;
+
+
+.sensors {
+  @include flexbox;
+  @include justify-content(space-around);
+  @include align(center);
+  flex-flow: row wrap;
+  margin-bottom: 40px;
+
+  .contact {
+    background-color: #00e676 !important;
+  }
+
+  .term {
+    background-color: #40c4ff !important;
+  }
+
+  .sensor__item {
+    width: $sens-height;
+    height: $sens-width;
+    @include border-radius(5%);
+    @extend .card-panel;
+    @extend .grey, .lighten-5;
+    text-align: center;
+    @include transition(all 0.5s);
+
+    &:hover {
+      //@extend .orange;
+      @include transform(box-shadow .25s);
+      @include box-shadow(0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19));
+    }
+
+    .sensor__name {
+      line-height: $sens-height - 40px;
+      @extend .white-text;
+      cursor: pointer;
+      font-weight: 600;
+    }
+  }
+}

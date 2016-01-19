@@ -1,6 +1,6 @@
 /* --------- bourbon --------- */
 
-@import "bourbon";
+@import "_misc/bourbon/bourbon";
 
 /* --------- normalize --------- */
 
@@ -32,6 +32,8 @@
 //@import "_sections/nav";
 @import "_sections/sidebar";
 @import "_sections/content";
+@import "_sections/sensors";
+@import "_sections/inputs";
 @import "_sections/footer";
 
 
