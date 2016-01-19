@@ -56,12 +56,15 @@
 .maincontent {
 
   #sidebar-toggle {
-    @extend .orange, .darken-3;
+    @extend .orange, .darken-4;
     border-radius: 3px;
     display: block;
-    position: relative;
+    // position: relative;
+    position: absolute;
+    top: 10px;
     padding: 10px 7px;
     float: left;
+    border: 1px solid #76ff03;
 
 
     .bar {
@@ -78,5 +81,3 @@
     }
   }
 }
-
-

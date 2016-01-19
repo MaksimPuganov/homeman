@@ -9,8 +9,8 @@
 //  }
 //
 //}
-$sens-height: 130px;
-$sens-width: $sens-height;
+$sens-height: 60px;
+$sens-width: 80px;
 
 
 .sensors {
@@ -30,7 +30,7 @@ $sens-width: $sens-height;
   .sensor__item {
     width: $sens-height;
     height: $sens-width;
-    @include border-radius(50%);
+    @include border-radius(5%);
     @extend .card-panel;
     @extend .grey, .lighten-5;
     text-align: center;
