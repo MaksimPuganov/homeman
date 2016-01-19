@@ -1,7 +1,7 @@
 {
-  "name": "JADE_SASS_template",
-  "version": "1.0.0",
-  "description": "template for good works",
+  "name": "Home_Manager",
+  "version": "0.0.4",
+  "description": "Home Manager markups",
   "main": "gulpfile.js",
   "repository": "",
   "scripts": {
@@ -23,5 +23,8 @@
     "gulp-uglify": "^1.4.1",
     "gulp-uncss": "^1.0.4",
     "gulp-util": "^3.0.6"
+  },
+  "dependencies": {
+    "bourbon": "^4.2.6"
   }
 }
