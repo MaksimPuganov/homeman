@@ -18,17 +18,25 @@
     position: static;
   }
 
+  .inputs__label {
+    font-size: 0.9rem;
+    width: 12rem;
+    line-height: 3rem;
+  }
+
   .inputs__input {
     margin-right: 10px;
 
     &:disabled {
       background-color: cyan;
+      text-align: center;
     }
   }
 
   .onoffswitch {
     position: relative;
     width: 35px;
+    margin-top: 1rem;
     -webkit-user-select:none;
     -moz-user-select:none;
     -ms-user-select: none;
