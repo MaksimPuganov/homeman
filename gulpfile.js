@@ -20,6 +20,11 @@ var
             destination: 'dist'
         },
 
+        js: {
+            location: 'dev/scripts/**/*.js',
+            destination: 'dist/js'
+        },
+
         scss: {
             location: 'dev/styles/**/*.scss',
             entryPoint: 'dist/css'
@@ -44,6 +49,14 @@ gulp.task('jade', function() {
             pretty: '\t',
         }))
         .pipe(gulp.dest(paths.jade.destination));
+});
+
+/* --------- javascript --------- */
+
+gulp.task('js', function() {
+    gulp.src(paths.js.location)
+        .pipe(plumber())
+        .pipe(gulp.dest(paths.js.destination));
 });
 
 /* --------- sass --------- */
@@ -73,6 +86,7 @@ gulp.task('sync', function() {
 
 gulp.task('watch', function() {
     gulp.watch(paths.jade.location, ['jade']);
+    gulp.watch(paths.js.location, ['js']);
     gulp.watch(paths.scss.location, ['sass']);
 
     gulp.watch(paths.browserSync.watchPaths).on('change', browserSync.reload);
@@ -80,4 +94,4 @@ gulp.task('watch', function() {
 
 /* --------- default --------- */
 
-gulp.task('default', ['jade', 'sass', 'sync', 'watch']);
+gulp.task('default', ['jade', 'js', 'sass', 'sync', 'watch']);
