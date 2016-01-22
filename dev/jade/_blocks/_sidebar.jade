@@ -1,4 +1,4 @@
-//sidebar block
+//sidebar block start
 
 .sidebar
         -var items = ["Главная", "Сеть", "GSM", "Модули", "Группы", "Автоматизация", "Входы"]
@@ -6,3 +6,4 @@
             each item in items
                 li(class="sidebar__item " + ( (item == "Главная") ? 'active' : ''))
                     a(href="#").sidebar__link= item
+//sidebar block end

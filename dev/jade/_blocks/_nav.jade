@@ -1,3 +1,5 @@
+//block nav start
+
 nav.nav.hidden
    .container
       -var items = ["Главная", "Сеть", "GSM", "Модули", "Группы", "Автоматизация", "Входы"]
@@ -5,3 +7,4 @@ nav.nav.hidden
          each item in items
             li(class="nav__item nav__item_" + ( (item == "Входы") ? 'active' : ''))
                a(href="#").nav__link= item
+//block nav end
